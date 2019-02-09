@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>IMPBuilder</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+<body>
+    <div class="container">
+    <div class="center">
+      <h1>IMPBuilder.</h1>
+      <div class="form onecolumn">
+        <label class="stepone">I want to make a new...
+          <select class="type">
+            <option default value="select" 
+            <option value="website">Website</option>
+            <option value="nodejs">Node app</option>
+          </select>
+        </label>
+        <label class="steptwo">Project title:
+          <input type="text" class="title" />
+        </label><!--
+        <label class="stepthree">
+          <div>
+            <input type="checkbox" class="prettySetup" checked /> Include pretty setup
+          </div>
+        </label>-->
+        <hr />
+        <label class="stepthree">Export to
+          <select class="export">
+            <option value="disk">Disk</option>
+            <option value="codepen">CodePen</option>
+            <option value="github">GitHub</option>
+          </select>
+        </label>
+        <label class="stepthree">
+          <button>Build</button></label>
+      </div>
+      <div class="loader"></div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

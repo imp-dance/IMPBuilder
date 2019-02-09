@@ -1,0 +1,25 @@
+{
+  "name": "impbuilder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imp-dance/IMPBuilder.git"
+  },
+  "author": "Håkon Underbakke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imp-dance/IMPBuilder/issues"
+  },
+  "homepage": "https://github.com/imp-dance/IMPBuilder#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}

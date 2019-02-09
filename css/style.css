@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://impedans.me/css/form');
+body, html{margin:0;padding:0;}
+*, *:before, *:after{box-sizing:inherit}
+body{
+  box-sizing:border-box;
+  font-family:'Varela Round', sans-serif;
+  font-size:18px;
+  background:#dfe7ff;
+}
+.container{
+  display:flex;
+  height:100vh;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  margin:0 0 15px;
+  font-size:3em;
+  user-select:none;
+}
+.center{
+  margin-top:-15px;
+  min-width:320px;
+  padding:30px 30px;
+  /*box-shadow:1px 2px 16px -9px #556696;*/
+}
+.form input,
+.form label,
+.form select,
+.form button,
+.form textarea{
+  font-family:'Varela Round', sans-serif;
+  font-size:1em;
+  margin-bottom:5px;
+}
+.form{
+  font-size:1.3em;
+}
+.form button{
+  margin-top:8px;
+}
+hr{
+    border: 1px solid #ccd6f3;
+    width: 100%;
+}
+input[type="checkbox"]:focus{
+  box-shadow:0px 1px 10px -1px #4282e8;
+  background:#4282e8;
+}
+.loader{
+  width:100px;
+  height:100px;
+  background:url('https://impedans.me/svg/loading');
+  background-size:100px;
+  margin:0 auto;
+  position:absolute;
+  pointer-events:none;
+  opacity:0;
+}
+.loader.show{
+  transition:all 0.2s ease-in-out;
+  position:static;
+  opacity:1;
+}
+.form.hide{
+  display:none;
+}
