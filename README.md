@@ -2,6 +2,8 @@
 
 A simple website builder (sets up ready-to-go file structure for development). 
 
+<img src="https://impedans.me/imp/files/909b1-impbuilder.png" width="250px" />
+
 ### Purpose
 To test out several APIs to be able to export the files to third parties such as Github or CodePen.
 
