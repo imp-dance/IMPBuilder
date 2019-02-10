@@ -23,6 +23,8 @@ h1{
   margin-top:-15px;
   min-width:320px;
   padding:30px 30px;
+  position:relative;
+  z-index:2;
   /*box-shadow:1px 2px 16px -9px #556696;*/
 }
 .form input,
@@ -65,4 +67,16 @@ input[type="checkbox"]:focus{
 }
 .form.hide{
   display:none;
+}
+.decor{
+  width: 0; 
+  height: 0; 
+  border-left: 100vw solid transparent;
+  border-right: 10vw solid transparent;
+  border-bottom: 100vh solid #d6dffb;
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
 }
