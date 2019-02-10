@@ -3,6 +3,7 @@ const url = require('url');
 const fs = require('fs');
 const path = require('path');
 const port = process.argv[2] || 9000;
+const opn = require('opn');
 
 http.createServer(function (req, res) {
   console.log(`${req.method} ${req.url}`);
@@ -56,6 +57,7 @@ http.createServer(function (req, res) {
   });
 
 
-}).listen(parseInt(port));
+}).listen(8080);
 
-console.log(`Server listening on port ${port}`);
+console.log(`Server listening on port 8080`);
+opn("http://localhost:" + 8080)
