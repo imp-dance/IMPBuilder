@@ -2,7 +2,6 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 const path = require('path');
-const port = process.argv[2] || 9000;
 const opn = require('opn');
 
 http.createServer(function (req, res) {
@@ -36,11 +35,11 @@ http.createServer(function (req, res) {
   }
   fs.exists(pathname, function (exist) {
     if(!exist) {
-      // if the file is not found, return 404
-      if (pathname.startsWith("./download/")){
+      if (pathname.startsWith("./download/")){ // Check if it's trying to download
         res.statusCode = tryDownload(pathname)
         res.statusCode == 404 ? res.end(`File ${pathname} not found!`) : res.end()
       }else{
+        // if the file is not found, return 404
         res.statusCode = 404;
         res.end(`File ${pathname} not found!`);
       }
