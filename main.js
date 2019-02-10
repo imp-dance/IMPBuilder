@@ -30,11 +30,20 @@ http.createServer(function (req, res) {
     '.doc': 'application/msword'
   };
 
+  let tryDownload = (path) => { // this is now our download hook
+    console.log(`Try downloading ${pathname}`)
+    return 404 // res.statusCode
+  }
   fs.exists(pathname, function (exist) {
     if(!exist) {
       // if the file is not found, return 404
-      res.statusCode = 404;
-      res.end(`File ${pathname} not found!`);
+      if (pathname.startsWith("./download/")){
+        res.statusCode = tryDownload(pathname)
+        res.statusCode == 404 ? res.end(`File ${pathname} not found!`) : res.end()
+      }else{
+        res.statusCode = 404;
+        res.end(`File ${pathname} not found!`);
+      }
       return;
     }
 
