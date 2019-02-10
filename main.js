@@ -6,7 +6,7 @@ const port = process.argv[2] || 9000;
 const opn = require('opn');
 
 http.createServer(function (req, res) {
-  console.log(`${req.method} ${req.url}`);
+  // console.log(`${req.method} ${req.url}`);
 
   // parse URL
   const parsedUrl = url.parse(req.url);

@@ -35,7 +35,7 @@ h1{
   margin-bottom:5px;
 }
 .form{
-  font-size:1.3em;
+  font-size:1em;
 }
 .form button{
   margin-top:8px;
@@ -51,7 +51,7 @@ input[type="checkbox"]:focus{
 .loader{
   width:100px;
   height:100px;
-  background:url('https://impedans.me/svg/loading');
+  background:url('../svg/loading.svg');
   background-size:100px;
   margin:0 auto;
   position:absolute;

@@ -24,5 +24,26 @@ title.addEventListener("keypress", (e) => {
     exportOptions.focus()
   }
 })
-type.addEventListener("change", ()=>{title.focus()})
+type.addEventListener("change", ()=>{
+  type.value == "nodejs" ? changeState("nodejs") : changeState("web")
+  title.focus()
+})
 exportOptions.addEventListener("change", ()=>{button.focus()})
+let changeState = (state) => {
+  switch (state){
+    case "nodejs":
+      exportOptions.innerHTML = `
+        <option value="disk">Disk</option>
+        <option value="github">GitHub</option>
+      `
+    break;
+    case "web":
+    default:
+    exportOptions.innerHTML = `
+        <option value="disk">Disk</option>
+        <option value="codepen" class="notnode">CodePen</option>
+        <option value="github">GitHub</option>
+    `
+    break;
+  }
+}
