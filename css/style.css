@@ -25,6 +25,7 @@ h1{
   padding:30px 30px;
   position:relative;
   z-index:2;
+  animation:centerAnimation .3s ease-in-out;
   /*box-shadow:1px 2px 16px -9px #556696;*/
 }
 .form input,
@@ -79,4 +80,16 @@ input[type="checkbox"]:focus{
   left:0;
   bottom:0;
   right:0;
+  animation:borderAnimation .5s ease-in-out;
+}
+@keyframes borderAnimation {
+  from{
+    opacity:0;
+  }
+}
+@keyframes centerAnimation {
+  from{
+    transform:translate(0px, 10px);
+    opacity:0;
+  }
 }
