@@ -2,8 +2,11 @@
 
 A simple website builder (sets up ready-to-go file structure for development). 
 
-## Purpose
+### Purpose
 To test out several APIs to be able to export the files to third parties such as Github or CodePen.
+
+### Goal
+A simple and quick to use website builder that will export all kinds of default file structures (NodeJS, HTML5/web, Electron, etc) with extra options to include default pretty but lightweight stylesheets.
 
 ## Contribute
 ### Setup
