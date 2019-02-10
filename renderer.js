@@ -5,6 +5,7 @@ let type = document.querySelector(".type")
 let prettySetup = document.querySelector(".prettySetup")
 let exportOptions = document.querySelector(".export")
 let loader = document.querySelector(".loader")
+let h1 = document.querySelector("h1")
 window.onload = () => {
     type.focus();
 }
@@ -12,10 +13,12 @@ button.addEventListener("click", () => {
   button.blur();
   loader.classList.add("show")
   form.classList.add("hide")
+  h1.classList.add("hide")
   // build
   setTimeout(() =>{
   loader.classList.remove("show")
   form.classList.remove("hide")
+  h1.classList.remove("hide")
   }, 2500)
 })
 title.addEventListener("keypress", (e) => {
