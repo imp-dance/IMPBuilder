@@ -6,6 +6,11 @@ let prettySetup = document.querySelector(".prettySetup")
 let exportOptions = document.querySelector(".export")
 let loader = document.querySelector(".loader")
 let h1 = document.querySelector("h1")
+let globalState = {
+  type: "web",
+  title: "",
+  export: "disk"
+}
 window.onload = () => {
     type.focus();
 }
@@ -28,25 +33,30 @@ title.addEventListener("keypress", (e) => {
   }
 })
 type.addEventListener("change", ()=>{
-  type.value == "nodejs" ? changeState("nodejs") : changeState("web")
+  type.value == "nodejs" ? changeState("nodejs", "type") : changeState("web", "type")
   title.focus()
 })
 exportOptions.addEventListener("change", ()=>{button.focus()})
-let changeState = (state) => {
-  switch (state){
-    case "nodejs":
-      exportOptions.innerHTML = `
-        <option value="disk">Disk</option>
-        <option value="github">GitHub</option>
-      `
-    break;
-    case "web":
-    default:
-    exportOptions.innerHTML = `
-        <option value="disk">Disk</option>
-        <option value="codepen" class="notnode">CodePen</option>
-        <option value="github">GitHub</option>
-    `
-    break;
+let changeState = (state, method) => {
+  if (method == "type"){
+    switch (state){
+      case "nodejs":
+        exportOptions.innerHTML = `
+          <option value="disk">Disk</option>
+          <option value="github">GitHub</option>
+        `
+        globalState.type = "nodejs"
+      break;
+      case "web":
+      default:
+        exportOptions.innerHTML = `
+            <option value="disk">Disk</option>
+            <option value="codepen" class="notnode">CodePen</option>
+            <option value="github">GitHub</option>
+        `
+        globalState.type = "web"
+      break;
+    }
   }
+  return globalState
 }
